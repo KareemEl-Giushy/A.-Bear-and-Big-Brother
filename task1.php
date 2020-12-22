@@ -1,4 +1,6 @@
 <?php
+    // Including Testing Script  
+    include_once 'test/testing.php';
 
     function limak($a = 0, $b = 0) {
         
@@ -10,13 +12,14 @@
         for($i = 1;;$i++) {
             $a *= 3;
             $b *= 2;
-            if($a > $b)
+            if($a > $b){
                 break;
-
+            }
         
         }
         
         echo $i;
+        return $i;
         
         */
 
@@ -30,7 +33,10 @@
         
         // Print Years
 
-        echo $count;   
+        echo $count;
+        
+        return $count; // For Testing
     }
 
-    limak(4, 7);
+// Testing
+test('limak');
